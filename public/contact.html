@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We Are Fitness | Contact</title>
+  <meta
+    name="description"
+    content="Get in touch with We Are Fitness for coaching, questions, or community updates."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="We Are Fitness home">
+        <img class="site-logo" src="images/WAF_primary.png" alt="We Are Fitness">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a class="is-active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container split-layout">
+        <div class="section-copy">
+          <p class="eyebrow">Contact</p>
+          <h1>Let’s make the first step feel easy.</h1>
+          <p class="hero-text">
+            If you are curious about coaching, unsure where to start, or simply want to ask a question, reach out. The tone here should feel open, kind, and easy for beginners.
+          </p>
+        </div>
+        <div class="section-aside">
+          <div class="photo-card photo-wide accent-card photo-contact-hero">
+            <div class="photo-fill">
+              <span>Contact photo</span>
+              <p>Add a friendly image that makes the page feel personal and welcoming.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-card contact-detail-card">
+          <p class="section-label">Get in touch</p>
+          <p><strong>Email</strong><br><a href="mailto:hello@wearefitness.co">hello@wearefitness.co</a></p>
+          <p><strong>Instagram</strong><br><a href="https://instagram.com/wearefitness" target="_blank" rel="noreferrer">instagram.com/wearefitness</a></p>
+          <p><strong>Facebook</strong><br><a href="https://facebook.com/wearefitness" target="_blank" rel="noreferrer">facebook.com/wearefitness</a></p>
+          <p><strong>TikTok</strong><br><a href="https://tiktok.com/@wearefitness" target="_blank" rel="noreferrer">tiktok.com/@wearefitness</a></p>
+          <a class="button button-secondary" href="mailto:hello@wearefitness.co">Email We Are Fitness</a>
+        </div>
+        <div>
+          <div class="section-copy contact-copy-block">
+            <p class="section-label">Call to action</p>
+            <h2>Tell me where you are at and what kind of support you need.</h2>
+            <p>
+              Whether you want personal training, nutrition guidance, endurance support, or a gentle way back into routine, there is room to start simply.
+            </p>
+          </div>
+          <form class="contact-form" data-success-message="Thanks for reaching out. We will be in touch soon.">
+            <label class="sr-only" for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" placeholder="Your name" required>
+            <label class="sr-only" for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" placeholder="Your email address" required>
+            <label class="sr-only" for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Tell me a little about your goals or where you'd like support." required></textarea>
+            <button class="button button-primary" type="submit">Send Message</button>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell footer-stack">
+      <div class="footer-branding">
+        <img class="footer-logo" src="images/WAF_primary.png" alt="We Are Fitness">
+        <p>Friendly coaching, supportive community, and sustainable progress for every level.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <form class="footer-newsletter" data-success-message="Thanks for subscribing to updates from We Are Fitness.">
+        <label class="sr-only" for="footer-contact-email">Email</label>
+        <input id="footer-contact-email" name="email" type="email" placeholder="Email for updates" required>
+        <button class="button button-primary" type="submit">Subscribe</button>
+        <p class="form-message" aria-live="polite"></p>
+      </form>
+      <p class="footer-copy">&copy; <span class="js-year"></span> We Are Fitness</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
