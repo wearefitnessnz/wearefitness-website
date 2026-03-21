@@ -4,180 +4,284 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>We Are Fitness | Home</title>
-
+  <meta
+    name="description"
+    content="We Are Fitness is a warm, welcoming fitness community focused on support, confidence, and sustainable progress."
+  >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="We Are Fitness home">
+        <img class="site-logo" src="images/logo/logo_03.png" alt="We Are Fitness">
+      </a>
 
-<header class="site-header">
-  <div class="container nav-shell">
-    <a class="brand" href="index.html">
-      <img class="site-logo" src="images/logo/logo_03.png" alt="We Are Fitness">
-    </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <nav class="site-nav">
-      <a class="is-active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="coaching.html">Coaching</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-
-    <!-- LEFT -->
-    <div class="hero-copy">
-      <p class="eyebrow">Supportive coaching for real life</p>
-
-      <h1>A fitness community that feels warm, welcoming, and full of encouragement.</h1>
-
-      <p class="hero-text">
-        We Are Fitness is a place for beginners, busy women, and anyone wanting support that feels personal.
-        Come for the coaching, stay for the connection, and build confidence with people who are genuinely in your corner.
-      </p>
-
-      <div class="hero-actions">
-        <a class="button button-primary" href="contact.html">Start Here</a>
-        <a class="button button-secondary" href="coaching.html">Explore Coaching</a>
-      </div>
-
-      <div class="hero-highlights">
-        <span>Beginner-friendly support</span>
-        <span>Community-led motivation</span>
-        <span>Strong, sustainable progress</span>
-      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="is-active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- RIGHT -->
-    <div class="hero-visuals">
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Coaching. Community. Real life.</p>
+          <h1>A fitness community that feels warm, welcoming, and full of support.</h1>
+          <p class="hero-text">
+            We Are Fitness is a space for beginners, busy people, and anyone wanting support that feels personal.
+            Come for the coaching, stay for the connection, and build confidence with people who are genuinely in your corner.
+          </p>
 
-      <!-- CARD -->
-      <article class="story-card">
-        <p class="story-label">What it feels like</p>
-        <h2>Strong women. Soft landing. Real support.</h2>
-        <p>
-          This is not about proving yourself before you belong. It is about feeling welcomed first,
-          then building strength in a way that fits your life.
-        </p>
-      </article>
+          <div class="hero-actions">
+            <a class="button button-primary" href="contact.html">Start Here</a>
+            <a class="button button-secondary" href="coaching.html">Explore Coaching</a>
+          </div>
 
-      <!-- IMAGES -->
-      <div class="hero-photos">
-
-        <div class="photo-card photo-tall">
-          <img src="images/Pic_01.jpg" class="real-image" alt="">
-          <div class="image-overlay">
-            <h3>Stronger Together</h3>
-            <p>Real women. Real progress. Real support.</p>
+          <div class="hero-highlights">
+            <span>Beginner-friendly support</span>
+            <span>Community-led motivation</span>
+            <span>Strong, sustainable progress</span>
           </div>
         </div>
 
-        <div class="photo-card photo-small">
-          <img src="images/coach.jpg" class="real-image" alt="">
-          <div class="image-overlay">
-            <h3>Your Coach</h3>
-            <p>Guidance and support every step</p>
+        <div class="hero-visuals">
+          <article class="story-card">
+            <p class="story-label">What it feels like</p>
+            <h2>Strong people. Real support. Built together.</h2>
+            <p>
+              This is not about proving yourself before you belong. It is about feeling welcomed first,
+              then building strength in a way that fits your life.
+            </p>
+          </article>
+
+          <div class="hero-photos">
+            <div class="photo-card photo-tall">
+              <img src="images/Pic_01.jpg" alt="Training session" class="real-image">
+              <div class="image-overlay">
+                <h3>Stronger Together</h3>
+                <p>Real people. Real progress. Real support.</p>
+              </div>
+            </div>
+
+            <div class="photo-card photo-small">
+              <img src="images/coach.jpg" alt="Coach" class="real-image">
+              <div class="image-overlay">
+                <h3>Your Coach</h3>
+                <p>Guidance, structure, and support every step.</p>
+              </div>
+            </div>
+
+            <div class="photo-card photo-small">
+              <img src="images/Pic_03.jpg" alt="Community moment" class="real-image">
+              <div class="image-overlay">
+                <h3>Community</h3>
+                <p>A place where everyone is welcome.</p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="photo-card photo-small">
-          <img src="images/Pic_03.jpg" class="real-image" alt="">
-          <div class="image-overlay">
-            <h3>Community</h3>
-            <p>A place to feel supported</p>
-          </div>
+    <section class="section">
+      <div class="container split-layout">
+        <div class="section-copy">
+          <p class="section-label">Welcome</p>
+          <h2>Fitness should feel like support, not pressure.</h2>
+          <p>
+            We Are Fitness is built for people who want clear coaching and a community that makes showing up easier.
+            Every session is designed to feel approachable, encouraging, and grounded in progress that lasts.
+          </p>
+          <p>
+            If you are new, rebuilding confidence, or ready for a stronger routine, this space is designed to help you feel capable from day one.
+          </p>
         </div>
 
+        <div class="photo-card photo-wide">
+          <img src="images/Pic_02.jpg" alt="Training environment" class="real-image">
+          <div class="image-overlay">
+            <h3>Start Where You Are</h3>
+            <p>Progress begins with support that feels possible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Community</p>
+            <h2>Support is built into the experience.</h2>
+          </div>
+          <p class="section-intro">
+            The community side of We Are Fitness matters just as much as the training. People stay consistent when they feel seen, encouraged, and connected.
+          </p>
+        </div>
+
+        <div class="community-grid">
+          <article class="community-card">
+            <h3>Welcoming atmosphere</h3>
+            <p>Friendly guidance and a tone that helps new members settle in quickly.</p>
+          </article>
+
+          <article class="community-card">
+            <h3>Shared accountability</h3>
+            <p>Progress feels lighter when encouragement and momentum come from the people around you.</p>
+          </article>
+
+          <article class="community-card">
+            <h3>Real connection</h3>
+            <p>Education, celebration, and support beyond the workout itself.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Coaching Preview</p>
+            <h2>Simple support, clear structure, real progress.</h2>
+          </div>
+          <p class="section-intro">
+            Coaching is designed to stay personal and practical, whether someone wants 1:1 sessions, nutrition guidance, endurance support, or a mix of everything.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card accent-blue">
+            <h3>Personal Training</h3>
+            <p>Build confidence, learn good movement, and get stronger in a way that feels manageable.</p>
+          </article>
+
+          <article class="service-card accent-yellow">
+            <h3>Sport Nutrition</h3>
+            <p>Simple support around fuelling, recovery, and habits that work in everyday life.</p>
+          </article>
+
+          <article class="service-card accent-red">
+            <h3>Endurance Coaching</h3>
+            <p>Structured guidance for events, races, and stronger aerobic performance.</p>
+          </article>
+
+          <article class="service-card accent-green">
+            <h3>Hybrid Support</h3>
+            <p>Combine in-person coaching with online accountability and regular check-ins.</p>
+          </article>
+        </div>
+
+        <div class="section-cta-row">
+          <a class="button button-primary" href="coaching.html">View Coaching Details</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container newsletter-shell">
+        <div class="newsletter-copy">
+          <p class="section-label">Newsletter</p>
+          <h2>Stay connected to the community between sessions.</h2>
+          <p>
+            Training tips, nutrition support, encouragement, and community updates in a simple email that keeps people feeling involved and inspired.
+          </p>
+        </div>
+
+        <form class="newsletter-form">
+          <label class="sr-only" for="home-newsletter-name">Name</label>
+          <input id="home-newsletter-name" name="name" type="text" placeholder="Your name">
+
+          <label class="sr-only" for="home-newsletter-email">Email</label>
+          <input id="home-newsletter-email" name="email" type="email" placeholder="Your email address">
+
+          <button class="button button-primary" type="submit">Join the Newsletter</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Testimonials</p>
+            <h2>A community that helps people feel stronger in every sense.</h2>
+          </div>
+          <p class="section-intro">
+            Warm, capable, personal, and encouraging — that is the feeling behind We Are Fitness.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <p>"I felt comfortable from day one. The coaching was kind, clear, and made starting feel so much less intimidating."</p>
+            <cite>Hannah</cite>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <p>"It is the first time fitness has felt supportive instead of overwhelming. I am more confident and far more consistent."</p>
+            <cite>Georgia</cite>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <p>"There is real encouragement here. It feels like people genuinely want to see you do well."</p>
+            <cite>Olivia</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container split-layout">
+        <div class="section-copy">
+          <p class="section-label">Contact</p>
+          <h2>Ready to start?</h2>
+          <p>
+            If you want support that feels personal, encouraging, and realistic, get in touch and we can talk about the best place for you to begin.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <p><strong>Email</strong><br><a href="mailto:hello@wearefitness.co">hello@wearefitness.co</a></p>
+          <p><strong>Instagram</strong><br><a href="https://instagram.com/wearefitness" target="_blank" rel="noreferrer">instagram.com/wearefitness</a></p>
+          <a class="button button-secondary" href="contact.html">Contact We Are Fitness</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell footer-stack">
+      <div class="footer-branding">
+        <img class="footer-logo" src="images/logo/logo_03.png" alt="We Are Fitness">
+        <p>Friendly coaching, supportive community, and sustainable progress for every level.</p>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- WELCOME -->
-<section class="section">
-  <div class="container split-layout">
-
-    <div>
-      <p class="section-label">Welcome</p>
-      <h2>Fitness should feel like support, not pressure.</h2>
-      <p>
-        We Are Fitness is built for people who want clear coaching and a community that makes showing up easier.
-      </p>
-    </div>
-
-    <div class="photo-card">
-      <img src="images/Pic_02.jpg" class="real-image" alt="">
-    </div>
-
-  </div>
-</section>
-
-<!-- COMMUNITY -->
-<section class="section section-soft">
-  <div class="container">
-
-    <p class="section-label">Community</p>
-    <h2>Support is built into the experience.</h2>
-
-    <div class="community-grid">
-
-      <div class="community-card">
-        <h3>Welcoming</h3>
-        <p>Feel comfortable from day one</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="contact.html">Contact</a>
       </div>
 
-      <div class="community-card">
-        <h3>Accountability</h3>
-        <p>Stay consistent with support</p>
-      </div>
-
-      <div class="community-card">
-        <h3>Connection</h3>
-        <p>Real people, real encouragement</p>
-      </div>
-
+      <p class="footer-copy">© 2026 We Are Fitness</p>
     </div>
+  </footer>
 
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section">
-  <div class="container split-layout">
-
-    <div>
-      <p class="section-label">Contact</p>
-      <h2>Ready to start?</h2>
-      <p>Let’s talk about your goals.</p>
-    </div>
-
-    <div class="contact-card">
-      <p>Email: hello@wearefitness.co</p>
-      <p>Instagram: @wearefitness</p>
-    </div>
-
-  </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-shell">
-    <p>© 2026 We Are Fitness</p>
-  </div>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
