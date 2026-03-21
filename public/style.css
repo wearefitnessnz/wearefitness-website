@@ -62,7 +62,7 @@ textarea {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 4.5rem 0;
 }
 
 .section-soft {
@@ -92,9 +92,9 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(3rem, 7vw, 5.8rem);
-  max-width: 10ch;
-  margin-bottom: 1.2rem;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  max-width: 11ch;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -198,7 +198,7 @@ ul {
 
 .hero,
 .page-hero {
-  padding: 4.5rem 0 3rem;
+  padding: 3.5rem 0 2.5rem;
 }
 
 .hero-grid,
@@ -206,7 +206,7 @@ ul {
 .newsletter-shell,
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1.05fr 0.95fr;
   gap: 2rem;
   align-items: center;
 }
@@ -290,8 +290,14 @@ ul {
   gap: 1rem;
 }
 
+.photo-home-hero {
+  grid-row: span 2;
+}
+
 .hero-photos {
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: repeat(2, minmax(180px, 1fr));
+  align-items: stretch;
 }
 
 .story-card,
@@ -784,26 +790,24 @@ ul {
   border: 0;
 }
 
-@media (max-width: 1120px) {
-  .hero-grid,
-  .split-layout,
-  .newsletter-shell,
-  .contact-grid,
-  .section-head,
-  .community-grid,
-  .services-grid,
-  .pricing-grid,
-  .testimonials-grid,
-  .info-grid,
-  .steps-grid,
-  .footer-stack {
+@media (max-width: 760px) {
+  .story-metrics,
+  .hero-photos,
+  .two-up,
+  .three-up {
     grid-template-columns: 1fr;
   }
+}
 
-  .hero-copy {
-    padding-right: 0;
-  }
+.hero-copy {
+  padding-right: 0.5rem;
+}
 
+.hero-copy,
+.hero-visuals {
+  min-width: 0;
+}
+  
   .photo-tall {
     grid-row: auto;
     min-height: 340px;
