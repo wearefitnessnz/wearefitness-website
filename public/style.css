@@ -690,7 +690,6 @@ p {
 }
 
 .photo-about-hero {
-  width: 320px;
-  height: 230px;
+  max-width: 400px;
   margin: 0 auto;
 }
