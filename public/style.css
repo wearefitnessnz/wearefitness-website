@@ -483,19 +483,19 @@ p {
 
 .social-links {
   display: flex;
-  flex-direction: row;
   gap: 1rem;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 1.5rem;
+  justify-content: center;
 }
 
 .social-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 100%;
+  height: 100%;
   border-radius: 100%;
   background: #102b46;
   border: none;
@@ -509,8 +509,8 @@ p {
 }
 
 .social-links img {
-  width: 65%;
-  height: 65%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
