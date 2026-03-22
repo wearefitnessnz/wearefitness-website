@@ -123,7 +123,7 @@ p {
 
 .nav-shell {
   padding: 0.2rem 0;
-  min-height: 78px;
+  min-height: 50px;
 }
 
 .brand {
@@ -199,7 +199,7 @@ p {
 .newsletter-shell {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 2rem;
+  gap: 1rem;
   align-items: start;
 }
 
@@ -683,4 +683,8 @@ p {
     width: 18px;
     height: 18px;
   }
+}
+
+.page-hero {
+  margin-top: 2rem;
 }
