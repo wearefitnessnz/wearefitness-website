@@ -480,16 +480,17 @@ p {
   flex-wrap: wrap;
 }
 
-.social-links a {
-  display: inline-flex;
+.social-links {
+  display: flex;
+  gap: 1rem;
   align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 100%;
-  background: #102b46;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
 }
 
 .social-links a:hover {
