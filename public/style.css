@@ -122,8 +122,8 @@ p {
 }
 
 .nav-shell {
-  padding: 0.35rem 0;
-  min-height: 92px;
+  padding: 0.2rem 0;
+  min-height: 78px;
 }
 
 .brand {
@@ -217,7 +217,7 @@ p {
 
 .hero-visuals {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   align-content: start;
 }
 
