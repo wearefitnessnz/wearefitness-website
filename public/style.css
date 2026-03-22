@@ -688,3 +688,9 @@ p {
 .page-hero {
   margin-top: 2rem;
 }
+
+.photo-about-hero {
+  width: 220px;
+  height: 160px;
+  margin: 0 auto;
+}
