@@ -494,8 +494,8 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 50%;
+  width: 52px;
+  height: 52px;
   border-radius: 105%;
   background: #102b46;
   border: none;
