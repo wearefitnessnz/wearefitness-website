@@ -486,7 +486,7 @@ p {
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 80%;
+  border-radius: 100%;
   background: #102b46;
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
@@ -499,8 +499,8 @@ p {
 }
 
 .social-links img {
-  width: 65%;
-  height: 65%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
