@@ -122,7 +122,7 @@ p {
 }
 
 .nav-shell {
-  padding: 0.2rem 0;
+  padding: 0;
   min-height: 50px;
 }
 
@@ -133,7 +133,7 @@ p {
 
 .site-logo {
   width: auto;
-  height: clamp(82px, 8vw, 120px);
+    height: clamp(150px, 14vw, 200px);
   max-width: min(340px, 52vw);
   object-fit: contain;
 }
@@ -643,7 +643,7 @@ p {
   }
 
 .site-logo {
-  height: clamp(130px, 12vw, 180px);
+  height: clamp(150px, 14vw, 200px);
 }
 
   .story-card,
@@ -801,4 +801,12 @@ p {
   .contact-icons {
     justify-content: flex-start;
   }
+}
+
+.contact-copy-block p {
+  max-width: 420px;
+}
+
+.contact-copy-block {
+  max-width: 440px;
 }
