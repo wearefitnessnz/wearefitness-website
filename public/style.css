@@ -728,10 +728,6 @@ p {
     justify-content: flex-start;
     padding-top: 0;
   }
-
-  .contact-icons .social-links {
-    justify-content: flex-start;
-  }
 }
 
 .contact-top-row {
@@ -834,7 +830,7 @@ p {
 
 .contact-icons .social-links {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   align-items: center;
   justify-content: flex-start;
   margin-top: 0;
