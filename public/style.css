@@ -693,3 +693,7 @@ p {
   max-width: 350px;
   margin: 0 auto;
 }
+
+.photo-contact-hero {
+  height: 280px;
+}
