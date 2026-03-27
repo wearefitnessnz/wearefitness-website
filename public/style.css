@@ -483,11 +483,11 @@ p {
 
 .social-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 1.5rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .social-links a {
