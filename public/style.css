@@ -673,10 +673,10 @@ p {
     gap: 0.8rem;
   }
 
-  .social-links a {
-    width: 42px;
-    height: 42px;
-  }
+.social-links a {
+  width: 56px;
+  height: 56px;
+}
 
   .social-links img {
     width: 18px;
@@ -714,13 +714,6 @@ p {
   align-items: start;
   margin-top: -1rem;
   margin-bottom: 2.5rem;
-}
-
-.contact-icons {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding-top: 5.5rem;
 }
 
 .contact-icons .social-links {
@@ -849,7 +842,7 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 5.5rem;
+  padding-top: 6.5rem;
 }
 
 .contact-icons .social-links {
