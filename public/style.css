@@ -707,7 +707,7 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 6.5rem;
+  padding-top: 5.5rem;
 }
 
 .contact-icons .social-links {
@@ -830,7 +830,7 @@ p {
 
 .contact-icons .social-links {
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: center;
   justify-content: flex-start;
   margin-top: 0;
