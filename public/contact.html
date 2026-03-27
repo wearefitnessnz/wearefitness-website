@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <body>
   <header class="site-header" id="top">
     <div class="container nav-shell">
@@ -88,9 +90,14 @@
         </div>
 
 <div class="contact-cta">
-  <a class="button button-primary" href="https://calendly.com/wearefitness_nz/free-15-min-consultation" target="_blank">
-    👉 “Free 15-min consultation”
+  <a href="#" class="button button-primary"
+     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wearefitness_nz/free-15-min-consultation'});return false;">
+    Book a free 15-min call
   </a>
+
+  <p class="contact-note">
+    Not sure where to start? Let’s talk and find the best next step for you.
+  </p>
 </div>
       </div>
     </section>
