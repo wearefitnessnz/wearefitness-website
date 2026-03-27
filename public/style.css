@@ -707,3 +707,40 @@ p {
 .contact-icons .social-links {
   justify-content: center;
 }
+
+.contact-top-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icons .social-links {
+  justify-content: center;
+  margin-top: 0;
+}
+
+.contact-form {
+  max-width: 760px;
+}
+
+@media (max-width: 900px) {
+  .contact-top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-icons {
+    justify-content: flex-start;
+  }
+
+  .contact-icons .social-links {
+    justify-content: flex-start;
+  }
+}
