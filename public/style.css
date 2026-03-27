@@ -133,8 +133,8 @@ p {
 
 .site-logo {
   width: auto;
-  height: clamp(150px, 14vw, 200px);
-  max-width: min(380px, 58vw);
+  height: clamp(170px, 16vw, 240px);
+  max-width: min(420px, 60vw);
   object-fit: contain;
 }
 
