@@ -1,225 +1,619 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>We Are Fitness | Coaching</title>
-  <meta
-    name="description"
-    content="Explore We Are Fitness coaching options, pricing, and what is included."
-  >
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg: #f7f1e8;
+      --bg-soft: #efe5d7;
+      --card: #fffaf3;
+      --text: #1f1f1f;
+      --muted: #666;
+      --line: rgba(0,0,0,0.08);
+      --accent: #8fb7c9;
+      --accent-dark: #5d8798;
+      --gold: #d6b06a;
+      --shadow: 0 12px 35px rgba(0,0,0,0.08);
+      --radius: 24px;
+      --max-width: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, #fbf7f2 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: var(--accent-dark);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero {
+      padding: 2rem 0 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.6rem, 4vw, 4.7rem);
+      line-height: 0.98;
+      margin: 0 0 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-copy p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 62ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border-color: var(--line);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-dark);
+      color: var(--accent-dark);
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-image-wrap::before {
+      content: "";
+      position: absolute;
+      inset: auto -18px -18px auto;
+      width: 92%;
+      height: 92%;
+      background: var(--accent);
+      border-radius: var(--radius);
+      z-index: 0;
+      opacity: 0.18;
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 1;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 5;
+      background: #ddd;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .intro-box {
+      background: rgba(255,255,255,0.65);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-top: 1.75rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-bottom: 2.3rem;
+      max-width: 800px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .service-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-number {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-soft);
+      color: var(--accent-dark);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .service-card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .service-subtitle {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .price-box {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem 1.1rem;
+      margin: 1rem 0 1.2rem;
+    }
+
+    .price-box .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-dark);
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+
+    .price-box .price {
+      font-size: 1.65rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .service-card ul {
+      padding-left: 1.15rem;
+      margin: 0 0 1.4rem;
+      color: var(--text);
+    }
+
+    .service-card li {
+      margin-bottom: 0.55rem;
+    }
+
+    .service-footer {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .process-card {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 1.4rem;
+    }
+
+    .process-card span {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--text);
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .process-card h4 {
+      margin: 0 0 0.45rem;
+      font-size: 1.05rem;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .cta-section {
+      padding-bottom: 6rem;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #1f1f1f 0%, #333 100%);
+      color: white;
+      border-radius: 32px;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .cta-box h2 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.03;
+      letter-spacing: -0.03em;
+    }
+
+    .cta-box p {
+      margin: 0;
+      color: rgba(255,255,255,0.82);
+      max-width: 60ch;
+    }
+
+    .cta-panel {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 1.5rem;
+    }
+
+    .cta-panel strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .cta-panel p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-panel .btn-primary {
+      background: white;
+      color: var(--text);
+      width: 100%;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .cta-box,
+      .services-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 1rem;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(2.4rem, 10vw, 4rem);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section {
+        padding: 4rem 0;
+      }
+
+      .service-card,
+      .cta-box {
+        padding: 1.5rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="container nav-shell">
-      <a class="brand" href="index.html" aria-label="We Are Fitness home">
-        <img class="site-logo" src="images/logo/logo_01.png" alt="We Are Fitness">
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="is-active" href="coaching.html">Coaching</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
   <main>
-    <section class="page-hero">
-      <div class="container split-layout">
-        <div class="section-copy">
-          <p class="eyebrow">Coaching</p>
-          <h1>Clear options, supportive structure, and coaching that feels personal.</h1>
-          <p class="hero-text">
-            The coaching experience is designed to be straightforward and beginner-friendly while still delivering real guidance. Choose the level of support that fits your goals and your season of life.
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Coaching with We Are Fitness</div>
+          <h1>Support that meets you where you are — and helps you move forward.</h1>
+          <p>
+            Whether you want to get stronger, improve your nutrition, train for an event, or combine it all in one place,
+            these coaching options are designed to give you structure, support, and confidence.
           </p>
+
+          <div class="intro-box">
+            Strong coaching. Practical nutrition. Endurance support. Real-life flexibility.
+          </div>
+
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">Explore services</a>
+            <a href="contact.html" class="btn btn-secondary">Book a free 15-min consultation</a>
+          </div>
         </div>
-        <div class="section-aside">
-<div class="photo-card photo-wide photo-coaching-hero">
-  <img src="images/coaching/coaching_02.jpg" alt="We Are Fitness Coaching" class="real-image">
-</div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-image">
+            <img src="images/coaching/coaching_02.jpg" alt="We Are Fitness coaching session" />
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="services">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label">Services</p>
-            <h2>Choose the kind of support that fits you best.</h2>
-          </div>
-          <p class="section-intro">
-            Every service is built to feel clear, welcoming, and structured so members know exactly what support they are getting.
+        <div class="section-heading">
+          <div class="eyebrow">Services</div>
+          <h2>Choose the support that fits your goals.</h2>
+          <p>
+            Start with one area or combine services into a more complete coaching experience.
+            These blocks make it easy for people to understand what you offer at a glance.
           </p>
         </div>
+
         <div class="services-grid">
-          <article class="service-card accent-blue">
-            <h3>Personal Training</h3>
-            <p>Tailored sessions focused on strength, technique, confidence, and smart progression.</p>
+          <article class="service-card">
+            <div class="service-top">
+              <div>
+                <h3>Personal Training</h3>
+                <p class="service-subtitle">In-person coaching focused on strength, movement quality, confidence, and progress.</p>
+              </div>
+              <div class="service-number">01</div>
+            </div>
+
+            <div class="price-box">
+              <span class="label">Pricing</span>
+              <div class="price">1:1 Personal Training</div>
+              <p style="margin:0.9rem 0 0; color: var(--muted); line-height: 1.7;">
+                Casual session — <strong>$65 + GST</strong><br>
+                6-session pack — <strong>$351 + GST</strong><br>
+                10-session pack — <strong>$555 + GST</strong>
+              </p>
+            </div>
+
+            <ul>
+              <li>1:1 coaching tailored to your level and goals</li>
+              <li>Technique support, accountability, and progression</li>
+              <li>Great for beginners, return-to-training clients, and athletes</li>
+              <li>Session packs available for ongoing support</li>
+            </ul>
+
+            <div class="service-footer">A strong option if you want hands-on coaching, confidence in the gym, and structured progress.</div>
           </article>
-          <article class="service-card accent-yellow">
-            <h3>Sport Nutrition</h3>
-            <p>Simple, realistic nutrition guidance that supports training, recovery, and energy.</p>
+
+          <article class="service-card">
+            <div class="service-top">
+              <div>
+                <h3>Sport Nutrition</h3>
+                <p class="service-subtitle">Simple, practical guidance to fuel training, recovery, performance, and everyday life.</p>
+              </div>
+              <div class="service-number">02</div>
+            </div>
+
+            <div class="price-box">
+              <span class="label">Pricing</span>
+              <div class="price">Custom consults</div>
+              <p style="margin:0.9rem 0 0; color: var(--muted); line-height: 1.7;">
+                1:1 consults<br>
+                Macro + calorie guidance<br>
+                Meal structure + habit support
+              </p>
+            </div>
+
+            <ul>
+              <li>Nutrition reviews tailored to your lifestyle and training</li>
+              <li>Support with calories, macros, meal structure, and habits</li>
+              <li>Race fueling, recovery, and performance nutrition guidance</li>
+              <li>Ideal as a one-off consult or ongoing support</li>
+            </ul>
+
+            <div class="service-footer">Perfect for athletes, busy professionals, and anyone wanting clearer nutrition direction.</div>
           </article>
-          <article class="service-card accent-red">
-            <h3>Endurance Coaching</h3>
-            <p>Planning and support for races, endurance goals, and better training consistency.</p>
+
+          <article class="service-card">
+            <div class="service-top">
+              <div>
+                <h3>Endurance Coaching</h3>
+                <p class="service-subtitle">Structured support for runners, triathletes, and athletes training with purpose.</p>
+              </div>
+              <div class="service-number">03</div>
+            </div>
+
+            <div class="price-box">
+              <span class="label">Pricing</span>
+              <div class="price">Weekly coaching tiers</div>
+              <p style="margin:0.9rem 0 0; color: var(--muted); line-height: 1.7;">
+                Foundations — <strong>$12.4/week</strong><br>
+                Performance — <strong>$55/week</strong><br>
+                Elite — <strong>$120/week</strong>
+              </p>
+            </div>
+
+            <ul>
+              <li>Training plans built around your goals, experience, and schedule</li>
+              <li>Support with pacing, progression, consistency, and race prep</li>
+              <li>Can include gait analysis, strength work, and weekly check-ins</li>
+              <li>Designed for real life, not just ideal weeks</li>
+            </ul>
+
+            <div class="service-footer">Best for athletes preparing for events or wanting expert guidance and accountability.</div>
           </article>
-          <article class="service-card accent-green">
-            <h3>Hybrid Coaching</h3>
-            <p>A blend of in-person coaching and online support for members wanting flexibility.</p>
+
+          <article class="service-card">
+            <div class="service-top">
+              <div>
+                <h3>Hybrid Packages</h3>
+                <p class="service-subtitle">A combined approach for clients who want training, nutrition, and endurance support in one place.</p>
+              </div>
+              <div class="service-number">04</div>
+            </div>
+
+            <div class="price-box">
+              <span class="label">Pricing</span>
+              <div class="price">From $342/month + GST</div>
+              <p style="margin:0.9rem 0 0; color: var(--muted); line-height: 1.7;">
+                Training + nutrition<br>
+                In-person + online<br>
+                Weekly check-ins
+              </p>
+            </div>
+
+            <ul>
+              <li>Mix of in-person sessions and online programming</li>
+              <li>Training plus nutrition guidance together</li>
+              <li>Ongoing accountability and regular coaching contact</li>
+              <li>Built for people who want a full roadmap, not just one piece</li>
+            </ul>
+
+            <div class="service-footer">The best option for long-term progress, busy schedules, and bigger performance goals.</div>
           </article>
         </div>
-      </div>
-    </section>
-
-<div class="services-grid">
-    <section class="prices">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label">Prices</p>
-            <h2>Choose how you want to work together.</h2>
-          </div>
-          <p class="section-intro">
-            Every service is built to feel clear, welcoming, and structured so members know exactly what support they are getting.
-          </p>
-        </div>
-  <!-- PERSONAL TRAINING -->
-  <article class="service-card accent-blue">
-    <h3>Personal Training</h3>
-    <p>1:1 sessions focused on strength, technique, and confidence.</p>
-    <p><strong>45 min:</strong> $65 + GST</p>
-    <p><strong>60 min:</strong> $75 + GST</p>
-    <p><strong>Packages:</strong> 5 sessions (5% off) · 10 sessions (10% off)</p>
-  </article>
-
-  <!-- SPORT NUTRITION -->
-  <article class="service-card accent-yellow">
-    <h3>Sport Nutrition</h3>
-    <p>Simple, realistic nutrition guidance to support training and recovery.</p>
-    <p><strong>Consultation:</strong> 45 min</p>
-    <p><strong>Personalised plan + support</strong></p>
-    <p><strong>From:</strong> $65 + GST</p>
-  </article>
-
-  <!-- ENDURANCE COACHING -->
-  <article class="service-card accent-red">
-    <h3>Endurance Coaching</h3>
-    <p>Structured training plans and guidance for performance and consistency.</p>
-    <p><strong>Monthly coaching</strong></p>
-    <p><strong>Includes:</strong> Monthly plan + support + check-ins</p>
-    <p><strong>From:</strong> $55</p>
-  </article>
-
-  <!-- HYBRID -->
-  <article class="service-card accent-green">
-    <h3>Hybrid Coaching</h3>
-    <p>A mix of in-person sessions and online coaching for full support.</p>
-    <p><strong>Hybrid:</strong> $342 + GST</p>
-    <p><strong>Hybrid Premium:</strong> $382 + GST</p>
-  </article>
-
-</div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label">What's Included</p>
-            <h2>Practical support that goes beyond the session itself.</h2>
-          </div>
-          <p class="section-intro">
-            Keep expectations clear with a structure that explains what members actually get when they sign up.
-          </p>
+        <div class="section-heading">
+          <div class="eyebrow">How it works</div>
+          <h2>A simple coaching process.</h2>
+          <p>Keep this part clear and welcoming so people know exactly what happens next.</p>
         </div>
-        <div class="info-grid two-up">
-          <article class="inclusion-card">
-            <h3>Included in coaching</h3>
-            <ul class="feature-list">
-              <li>Personal guidance based on goals and current level</li>
-              <li>Technique support and progressive training structure</li>
-              <li>Encouragement, accountability, and check-ins</li>
-              <li>Beginner-friendly explanations and clear direction</li>
-            </ul>
-          </article>
-          <article class="inclusion-card">
-            <h3>Best for members who want</h3>
-            <ul class="feature-list">
-              <li>Confidence in the gym or training environment</li>
-              <li>Consistent support without confusion</li>
-              <li>Nutrition and endurance guidance where needed</li>
-              <li>A coaching style that feels warm and realistic</li>
-            </ul>
-          </article>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <span>1</span>
+            <h4>Start with a chat</h4>
+            <p>Book your free 15-minute consultation so we can talk through your goals and what support you need.</p>
+          </div>
+
+          <div class="process-card">
+            <span>2</span>
+            <h4>Choose your coaching</h4>
+            <p>We’ll decide on the best option for you — training, nutrition, endurance coaching, or a hybrid package.</p>
+          </div>
+
+          <div class="process-card">
+            <span>3</span>
+            <h4>Get your plan</h4>
+            <p>You’ll receive clear next steps, structure, and coaching support tailored to your life and goals.</p>
+          </div>
+
+          <div class="process-card">
+            <span>4</span>
+            <h4>Build momentum</h4>
+            <p>We focus on consistency, confidence, and progress you can actually sustain.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft">
+    <section class="cta-section">
       <div class="container">
-        <div class="section-head">
+        <div class="cta-box">
           <div>
-            <p class="section-label">Clear Structure</p>
-            <h2>How to get started.</h2>
+            <div class="eyebrow" style="color:#d8c28f;">Ready to begin?</div>
+            <h2>Let’s find the right coaching option for you.</h2>
+            <p>
+              Whether you are starting from scratch, returning to training, or chasing a performance goal,
+              We Are Fitness is here to support your journey.
+            </p>
           </div>
-          <p class="section-intro">
-            Give new members a simple path so the next step feels easy.
-          </p>
-        </div>
-        <div class="steps-grid">
-          <article class="step-card">
-            <span class="step-number">1</span>
-            <h3>Reach out</h3>
-            <p>Send an email or message with your goals, experience level, and what support you are looking for.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">2</span>
-            <h3>Choose your support</h3>
-            <p>Find the coaching option that best suits your routine, goals, and preferred level of accountability.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">3</span>
-            <h3>Start with confidence</h3>
-            <p>Begin with clear direction, support, and a plan that feels realistic to follow.</p>
-          </article>
+
+          <div class="cta-panel">
+            <strong>Free 15-minute consultation</strong>
+            <p>A simple starting point to ask questions, share your goals, and see which coaching option fits best.</p>
+            <a href="contact.html" class="btn btn-primary">Book now</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-shell footer-stack">
-      <div class="footer-branding">
-        <img class="footer-logo" src="images/logo/logo_02.png" alt="We Are Fitness">
-        <p>Friendly coaching, supportive community, and sustainable progress for every level.</p>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="coaching.html">Coaching</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <p class="footer-copy">&copy; <span class="js-year"></span> We Are Fitness</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
