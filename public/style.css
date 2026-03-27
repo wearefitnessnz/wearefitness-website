@@ -697,3 +697,13 @@ p {
 .photo-contact-hero {
   height: 280px;
 }
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icons .social-links {
+  justify-content: center;
+}
