@@ -123,7 +123,8 @@ p {
 
 .nav-shell {
   padding: 0;
-  min-height: 80px;
+  min-height: auto;
+  align-items: center;
 }
 
 .brand {
@@ -489,9 +490,9 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 65px;
-  height: 65px;
-  border-radius: 100%;
+  width: 55px;
+  height: 55px;
+  border-radius: 90%;
   background: #102b46;
   border: none;
   box-shadow: none;
