@@ -642,10 +642,9 @@ p {
     font-size: clamp(1.75rem, 7vw, 2.4rem);
   }
 
-  .site-logo {
-    height: 64px;
-    max-width: 210px;
-  }
+.site-logo {
+  height: clamp(110px, 10vw, 150px);
+}
 
   .story-card,
   .service-card,
@@ -743,4 +742,8 @@ p {
   .contact-icons .social-links {
     justify-content: flex-start;
   }
+}
+
+.contact-top-row {
+  margin-top: -1rem;
 }
