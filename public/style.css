@@ -489,8 +489,8 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 90px;
-  height: 90px;
+  width: 65px;
+  height: 65px;
   border-radius: 100%;
   background: #102b46;
   border: none;
@@ -504,8 +504,8 @@ p {
 }
 
 .social-links img {
-  width: 65%;
-  height: 65%;
+  width: 85%;
+  height: 85%;
   object-fit: contain;
 }
 
