@@ -740,15 +740,14 @@ p {
     gap: 1rem;
   }
 
-  .social-links a {
-    width: 52px;
-    height: 52px;
-  }
+.footer-social a {
+  width: 52px;
+  height: 52px;
+}
 
-  .social-links img {
-    width: 65%;
-    height: 65%;
-  }
+.footer-social img {
+  width: 26px;
+  height: 26px;
 }
 
 .footer-connect-row {
