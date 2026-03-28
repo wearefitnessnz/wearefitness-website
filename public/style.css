@@ -750,3 +750,22 @@ p {
     height: 65%;
   }
 }
+
+.footer-connect-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.footer-connect-text {
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  white-space: nowrap;
+}
+
+.footer-connect-line {
+  height: 1px;
+  background: rgba(255,255,255,0.35);
+  flex-grow: 1;
+}
