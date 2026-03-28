@@ -12,6 +12,27 @@
   <style>
     /* ONLY small additions — keeps your system */
 
+    .coaching-top {
+      padding-bottom: 4.75rem;
+    }
+
+    .coaching-hero-layout {
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .coaching-hero-aside {
+      display: flex;
+      align-items: center;
+    }
+
+    .coaching-hero-image {
+      width: 100%;
+      min-height: 320px;
+      max-height: 380px;
+      overflow: hidden;
+    }
+
     .price-box {
       background: white;
       border-radius: 18px;
@@ -39,6 +60,47 @@
       color: var(--brand-blue);
       margin-bottom: 0.8rem;
     }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .footer-social a:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.16);
+    }
+
+    .footer-social img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 760px) {
+      .coaching-top {
+        padding-bottom: 3.4rem;
+      }
+
+      .coaching-hero-image {
+        min-height: 250px;
+        max-height: 300px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -64,20 +126,18 @@
 
 <main>
 
-<section class="page-hero">
-  <div class="container split-layout">
+<section class="page-hero coaching-top">
+  <div class="container split-layout coaching-hero-layout">
     <div class="section-copy">
       <p class="eyebrow">What coaching feels like</p>
       <h1>Clear support, real progress, and a plan that fits your life.</h1>
       <p class="hero-text">
         This is not about extreme approaches or all-or-nothing thinking. It is about building strength, confidence, and consistency with support that feels personal and realistic.
       </p>
-
-      
     </div>
 
-    <div class="section-aside">
-      <div class="photo-card photo-wide photo-wide">
+    <div class="section-aside coaching-hero-aside">
+      <div class="photo-card coaching-hero-image">
         <img src="images/coaching/coaching_02.jpg" alt="We Are Fitness coaching session" class="real-image">
       </div>
     </div>
@@ -195,10 +255,10 @@
     <div class="section-copy">
       <p class="section-label">Ready to start?</p>
       <h2>Let’s find your next step.</h2>
-      <p>Start with a free consultation and we’ll guide you from there.</p>
+      <p>Start with a free 15-minute consultation and we’ll guide you from there.</p>
 
       <div class="section-cta-row">
-        <a class="button button-primary" href="contact.html">Book Now</a>
+        <a class="button button-primary" href="contact.html">Book a 15-minute consultation</a>
       </div>
     </div>
 
@@ -206,6 +266,7 @@
       <p class="story-label">Free consultation</p>
       <h3>15 minutes. Clear direction.</h3>
       <p>Ask questions, get clarity, and understand what support fits you best.</p>
+      <a class="button button-primary" href="contact.html">Book now</a>
     </div>
 
   </div>
@@ -220,11 +281,22 @@
       <p>Friendly coaching, supportive community, and sustainable progress.</p>
     </div>
 
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="coaching.html">Coaching</a>
-      <a href="contact.html">Contact</a>
+    <div class="footer-social">
+      <a href="mailto:wearefitness.nz@outlook.com" target="_blank" rel="noopener noreferrer" aria-label="Email We Are Fitness">
+        <img src="images/icons/email.png" alt="Email">
+      </a>
+      <a href="https://www.instagram.com/wearefitness.pt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="images/icons/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/wearefitness.nz" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="images/icons/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.linkedin.com/in/carolina-ramirez-07b8783b6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img src="images/icons/linkin.png" alt="LinkedIn">
+      </a>
+      <a href="https://wa.me/64211202009" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img src="images/icons/whatsapp.png" alt="WhatsApp">
+      </a>
     </div>
 
     <p class="footer-copy">© 2026 We Are Fitness</p>
