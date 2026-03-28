@@ -768,3 +768,46 @@ p {
   background: rgba(255,255,255,0.35);
   flex-grow: 1;
 }
+
+/* Footer social (NEW clean version) */
+.footer-connect-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.footer-connect-text {
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  white-space: nowrap;
+}
+
+.footer-connect-line {
+  height: 1px;
+  background: rgba(255,255,255,0.35);
+  flex-grow: 1;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-social a {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
