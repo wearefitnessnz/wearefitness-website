@@ -4,306 +4,237 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>We Are Fitness | Coaching</title>
-  <meta
-    name="description"
-    content="Personal training, sport nutrition, endurance coaching, and hybrid support with We Are Fitness."
-  >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ONLY small additions — keeps your system */
+
+    .price-box {
+      background: white;
+      border-radius: 18px;
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      border: 1px solid rgba(36,48,67,0.1);
+    }
+
+    .price-box strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      background: rgba(20,136,229,0.1);
+      color: var(--brand-blue);
+      margin-bottom: 0.8rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-shell">
-      <a class="brand" href="index.html" aria-label="We Are Fitness home">
-        <img class="site-logo" src="images/logo/logo_01.png" alt="We Are Fitness">
-      </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="index.html">
+      <img class="site-logo" src="images/logo/logo_01.png" alt="We Are Fitness">
+    </a>
 
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="is-active" href="coaching.html">Coaching</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <button class="menu-toggle" type="button">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="is-active" href="coaching.html">Coaching</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container split-layout">
+    <div class="section-copy">
+      <p class="eyebrow">What coaching feels like</p>
+      <h1>Clear support, real progress, and a plan that fits your life.</h1>
+      <p class="hero-text">
+        This is not about extreme approaches or all-or-nothing thinking. It is about building strength, confidence, and consistency with support that feels personal and realistic.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#services">Explore Services</a>
+        <a class="button button-secondary" href="contact.html">Free Consultation</a>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero page-hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Coaching with We Are Fitness</p>
-          <h1>Support that meets you where you are and helps you move forward.</h1>
-          <p class="hero-text">
-            Whether you want to get stronger, improve your nutrition, train for an event, or combine it all in one place,
-            these coaching options are designed to give you structure, support, and confidence.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button button-primary" href="#services">Explore Services</a>
-            <a class="button button-secondary" href="contact.html">Book a Free 15-min Consultation</a>
-          </div>
-
-          <div class="hero-highlights">
-            <span>Strength training</span>
-            <span>Nutrition guidance</span>
-            <span>Endurance coaching</span>
-            <span>Real-life flexibility</span>
-          </div>
-        </div>
-
-        <div class="hero-visuals">
-          <article class="story-card">
-            <p class="story-label">What coaching feels like</p>
-            <h2>Clear support, real progress, and a plan that fits your life.</h2>
-            <p>
-              This is not about extreme approaches or all-or-nothing thinking.
-              It is about building strength, confidence, and consistency with support that feels personal and realistic.
-            </p>
-          </article>
-
-          <div class="hero-photos">
-            <div class="photo-card photo-tall">
-              <img src="images/coaching/coaching_02.jpg" alt="We Are Fitness coaching session" class="real-image">
-              <div class="image-overlay">
-                <h3>Coaching That Fits</h3>
-                <p>Support for your goals, your lifestyle, and your next step.</p>
-              </div>
-            </div>
-
-            <div class="photo-card photo-small">
-              <img src="images/coach.jpg" alt="Coach" class="real-image">
-              <div class="image-overlay">
-                <h3>Your Coach</h3>
-                <p>Guidance, structure, and support at every stage.</p>
-              </div>
-            </div>
-
-            <div class="photo-card photo-small">
-              <img src="images/Pic_03.jpg" alt="Community support" class="real-image">
-              <div class="image-overlay">
-                <h3>Support</h3>
-                <p>Confidence grows when you do not do it alone.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="section-aside">
+      <div class="photo-card photo-wide photo-about-hero">
+        <img src="images/coaching/coaching_02.jpg" alt="We Are Fitness coaching session" class="real-image">
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container split-layout">
-        <div class="section-copy">
-          <p class="section-label">Welcome</p>
-          <h2>Choose the support that fits your goals.</h2>
-          <p>
-            Start with one area or combine services into a more complete coaching experience.
-            Whether you are brand new, returning to training, or chasing a performance goal,
-            the focus is always on practical support and sustainable progress.
-          </p>
-          <p>
-            You do not need to be fit enough to start. You just need a clear plan, the right support,
-            and coaching that meets you where you are.
-          </p>
-        </div>
-
-        <div class="photo-card photo-wide">
-          <img src="images/Pic_02.jpg" alt="Training environment" class="real-image">
-          <div class="image-overlay">
-            <h3>Start Where You Are</h3>
-            <p>Build momentum with coaching that feels personal, welcoming, and clear.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="services">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label">Services</p>
-            <h2>Simple support, clear structure, real progress.</h2>
-          </div>
-          <p class="section-intro">
-            These coaching options are designed to help people quickly understand what you offer,
-            what it includes, and where they might fit best.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card accent-blue">
-            <h3>Personal Training</h3>
-            <p>
-              In-person coaching focused on strength, movement quality, confidence, and progress.
-            </p>
-            <p>
-              <strong>Casual session — $65 + GST</strong><br>
-              <strong>6-session pack — $351 + GST</strong><br>
-              <strong>10-session pack — $555 + GST</strong>
-            </p>
-            <p>
-              1:1 coaching tailored to your level and goals, with technique support, accountability,
-              and progression that feels manageable and effective.
-            </p>
-          </article>
-
-          <article class="service-card accent-yellow">
-            <h3>Sport Nutrition</h3>
-            <p>
-              Simple, practical guidance to fuel training, recovery, performance, and everyday life.
-            </p>
-            <p>
-              <strong>Custom consults</strong><br>
-              1:1 consults<br>
-              Macro + calorie guidance<br>
-              Meal structure + habit support
-            </p>
-            <p>
-              Ideal for athletes, busy people, and anyone wanting clearer nutrition direction without making it complicated.
-            </p>
-          </article>
-
-          <article class="service-card accent-red">
-            <h3>Endurance Coaching</h3>
-            <p>
-              Structured support for runners, triathletes, and athletes training with purpose.
-            </p>
-            <p>
-              <strong>Foundations — $12.4/week</strong><br>
-              <strong>Performance — $55/week</strong><br>
-              <strong>Elite — $120/week</strong>
-            </p>
-            <p>
-              Training plans built around your goals, experience, and schedule, with support for pacing,
-              consistency, race preparation, and real-life balance.
-            </p>
-          </article>
-
-          <article class="service-card accent-green">
-            <h3>Hybrid Packages</h3>
-            <p>
-              A combined approach for clients who want training, nutrition, and endurance support in one place.
-            </p>
-            <p>
-              <strong>From $342/month + GST</strong><br>
-              Training + nutrition<br>
-              In-person + online<br>
-              Weekly check-ins
-            </p>
-            <p>
-              Best for people who want a full roadmap, not just one piece, with coaching that supports long-term progress.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label">How It Works</p>
-            <h2>A simple coaching process.</h2>
-          </div>
-          <p class="section-intro">
-            Keep this part easy and clear so people know exactly what happens next.
-          </p>
-        </div>
-
-        <div class="community-grid">
-          <article class="community-card">
-            <h3>1. Start with a chat</h3>
-            <p>Book your free 15-minute consultation so we can talk through your goals and what support you need.</p>
-          </article>
-
-          <article class="community-card">
-            <h3>2. Choose your coaching</h3>
-            <p>We’ll decide on the best option for you — training, nutrition, endurance coaching, or a hybrid package.</p>
-          </article>
-
-          <article class="community-card">
-            <h3>3. Build momentum</h3>
-            <p>You’ll receive clear next steps, structure, and support designed to help you stay consistent and keep progressing.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container newsletter-shell">
-        <div class="newsletter-copy">
-          <p class="section-label">Why We Are Fitness</p>
-          <h2>Coaching that feels personal, practical, and supportive.</h2>
-          <p>
-            We Are Fitness is built around clear guidance, real encouragement, and progress that actually fits your life.
-            The goal is not just to train harder — it is to help you feel stronger, more confident, and more capable over time.
-          </p>
-        </div>
-
-        <div class="newsletter-form">
-          <p>
-            <strong>What you can expect:</strong>
-          </p>
-          <p>✔ Support that meets you where you are</p>
-          <p>✔ Coaching built around real life, not perfect weeks</p>
-          <p>✔ A balance of structure, accountability, and encouragement</p>
-          <p>✔ Progress that feels sustainable and worth building on</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section">
-      <div class="container split-layout">
-        <div class="section-copy">
-          <p class="section-label">Ready to start?</p>
-          <h2>Let’s find the right coaching option for you.</h2>
-          <p>
-            Whether you are starting from scratch, returning to training, or chasing a performance goal,
-            We Are Fitness is here to support your journey.
-          </p>
-          <div class="section-cta-row">
-            <a class="button button-primary" href="contact.html">Book Now</a>
-            <a class="button button-secondary" href="contact.html">Ask a Question</a>
-          </div>
-        </div>
-
-        <div class="story-card">
-          <p class="story-label">Free 15-minute consultation</p>
-          <h3>A simple starting point.</h3>
-          <p>
-            Ask questions, share your goals, and find out which coaching option fits you best.
-            It is an easy first step and a great way to get clear on what support would help most.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-shell footer-stack">
-      <div class="footer-branding">
-        <img class="footer-logo" src="images/logo/logo_02.png" alt="We Are Fitness">
-        <p>Friendly coaching, supportive community, and sustainable progress for every level.</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="coaching.html">Coaching</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <p class="footer-copy">© 2026 We Are Fitness</p>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section class="section section-soft" id="services">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <p class="section-label">Services</p>
+        <h2>Choose the support that fits your goals.</h2>
+      </div>
+      <p class="section-intro">
+        Simple options, clear structure, and support that actually works in real life.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card accent-blue">
+        <div class="service-number">01</div>
+        <h3>Personal Training</h3>
+        <p>In-person coaching focused on strength, confidence, and movement quality.</p>
+
+        <div class="price-box">
+          <strong>Casual — $65 + GST</strong>
+          6-pack — $351 + GST<br>
+          10-pack — $555 + GST
+        </div>
+
+        <p>Hands-on coaching, technique support, and structured progression.</p>
+      </article>
+
+      <article class="service-card accent-yellow">
+        <div class="service-number">02</div>
+        <h3>Sport Nutrition</h3>
+        <p>Practical nutrition guidance for performance and everyday life.</p>
+
+        <div class="price-box">
+          <strong>1:1 Consults</strong>
+          Macros & calories<br>
+          Meal structure & habits
+        </div>
+
+        <p>Simple, realistic strategies that actually fit your lifestyle.</p>
+      </article>
+
+      <article class="service-card accent-red">
+        <div class="service-number">03</div>
+        <h3>Endurance Coaching</h3>
+        <p>Structured plans for runners and triathletes.</p>
+
+        <div class="price-box">
+          <strong>Foundations — $12.4/week</strong>
+          Performance — $55/week<br>
+          Elite — $120/week
+        </div>
+
+        <p>Training, pacing, race prep, and ongoing coaching support.</p>
+      </article>
+
+      <article class="service-card accent-green">
+        <div class="service-number">04</div>
+        <h3>Hybrid Coaching</h3>
+        <p>Training + nutrition + accountability combined.</p>
+
+        <div class="price-box">
+          <strong>From $342/month + GST</strong>
+          In-person + online<br>
+          Weekly check-ins
+        </div>
+
+        <p>The most complete option for long-term progress.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <p class="section-label">How it works</p>
+        <h2>A simple coaching process.</h2>
+      </div>
+    </div>
+
+    <div class="community-grid">
+      <article class="community-card">
+        <h3>1. Start with a chat</h3>
+        <p>Free consultation to understand your goals.</p>
+      </article>
+
+      <article class="community-card">
+        <h3>2. Choose your plan</h3>
+        <p>We match you with the right coaching option.</p>
+      </article>
+
+      <article class="community-card">
+        <h3>3. Build momentum</h3>
+        <p>Consistent support, structure, and progress.</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section class="section contact-section">
+  <div class="container split-layout">
+
+    <div class="section-copy">
+      <p class="section-label">Ready to start?</p>
+      <h2>Let’s find your next step.</h2>
+      <p>Start with a free consultation and we’ll guide you from there.</p>
+
+      <div class="section-cta-row">
+        <a class="button button-primary" href="contact.html">Book Now</a>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <p class="story-label">Free consultation</p>
+      <h3>15 minutes. Clear direction.</h3>
+      <p>Ask questions, get clarity, and understand what support fits you best.</p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-shell footer-stack">
+    <div class="footer-branding">
+      <img class="footer-logo" src="images/logo/logo_02.png">
+      <p>Friendly coaching, supportive community, and sustainable progress.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="coaching.html">Coaching</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <p class="footer-copy">© 2026 We Are Fitness</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
