@@ -815,5 +815,6 @@ p {
 }
 
 .hero-single-photo {
-  min-height: 280px;
+  min-height: 180px;
+  max-height: 220px;
 }
