@@ -825,3 +825,16 @@ p {
 .about-story-block:nth-child(odd) .section-copy {
   padding-right: 1rem;
 }
+
+.about-hero-photos {
+  margin-top: 0.5rem;
+}
+
+.about-story-block {
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.about-story-block:last-child {
+  margin-bottom: 0;
+}
