@@ -817,3 +817,11 @@ p {
 .hero-single-photo {
   height: 300px;
 }
+
+.about-story-block:nth-child(even) .section-copy {
+  padding-left: 1rem;
+}
+
+.about-story-block:nth-child(odd) .section-copy {
+  padding-right: 1rem;
+}
