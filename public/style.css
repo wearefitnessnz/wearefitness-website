@@ -334,11 +334,12 @@ p {
 }
 
 .photo-tall {
-  min-height: 540px;
+  grid-row: span 2;
+  min-height: 430px;
 }
 
 .photo-small {
-  min-height: 260px;
+  min-height: 205px;
 }
 
 .photo-wide {
