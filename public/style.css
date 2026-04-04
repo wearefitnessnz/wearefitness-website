@@ -827,14 +827,18 @@ p {
 }
 
 .about-hero-photos {
-  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: repeat(2, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
 }
 
-.about-story-block {
-  margin-bottom: 3rem;
-  align-items: center;
+.about-hero-photos .photo-tall {
+  grid-row: span 2;
+  min-height: 500px;
 }
 
-.about-story-block:last-child {
-  margin-bottom: 0;
+.about-hero-photos .photo-small {
+  min-height: 240px;
 }
