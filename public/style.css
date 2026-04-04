@@ -814,7 +814,7 @@ p {
 }
 
 .hero-single-photo {
-  height: 300px;
+  max-height: 220px;
 }
 
 .about-story-block:nth-child(even) .section-copy {
