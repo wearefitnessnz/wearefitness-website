@@ -842,3 +842,17 @@ p {
 .about-hero-photos .photo-small {
   min-height: 240px;
 }
+
+.about-story-images-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.about-story-images-row .photo-card {
+  min-height: 240px;
+}
+
+.about-athlete-photo {
+  height: 320px;
+}
