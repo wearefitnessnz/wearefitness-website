@@ -853,6 +853,15 @@ p {
   min-height: 240px;
 }
 
+.about-story-images-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  margin-top: 3.5rem; /* 👈 THIS is the key */
+}
+
 .about-athlete-photo {
-  height: 320px;
+  height: 300px;
+  margin-top: 3.5rem;
 }
