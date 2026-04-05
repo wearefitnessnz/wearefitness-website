@@ -863,14 +863,13 @@ p {
 
 .about-athlete-photo {
   height: 300px;
-  margin-top: 4.5rem; /* pushes it down to align with text */
+  margin-top: 4.5rem;
   overflow: hidden;
-  border-radius: 20px; /* keep your style */
 }
 
 .about-athlete-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%; /* 👈 THIS fixes cropping */
+  object-position: center 30%;
 }
