@@ -885,3 +885,12 @@ p {
 .about-athlete-images .photo-card:first-child img {
   object-position: center 75%;
 }
+
+.about-story-block {
+  margin-bottom: 5rem;
+  align-items: center;
+}
+
+.about-story-block:last-child {
+  margin-bottom: 0;
+}
