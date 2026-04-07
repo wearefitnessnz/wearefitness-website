@@ -889,3 +889,11 @@ p {
 .about-story-block:last-child {
   margin-bottom: 0;
 }
+
+.about-story-block:last-child .photo-tall {
+  min-height: 320px;
+}
+
+.about-story-block:last-child .photo-small {
+  min-height: 150px;
+}
