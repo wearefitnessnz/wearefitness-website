@@ -217,16 +217,32 @@
           </p>
         </div>
 
-        <form class="newsletter-form">
-          <label class="sr-only" for="home-newsletter-name">Name</label>
-          <input id="home-newsletter-name" name="name" type="text" placeholder="Your name">
+<form
+  action="https://wearefitness.us14.list-manage.com/subscribe/post?u=28959d4007cb6961cdeba0f75&amp;id=13c190676f&amp;f_id=00e0bee5f0"
+  method="post"
+  target="_blank"
+  class="newsletter-form"
+>
 
-          <label class="sr-only" for="home-newsletter-email">Email</label>
-          <input id="home-newsletter-email" name="email" type="email" placeholder="Your email address">
+  <input type="text" name="FNAME" placeholder="Your name">
 
-          <button class="button button-primary" type="submit">Join the Newsletter</button>
-        </form>
-      </div>
+  <input type="text" name="LNAME" placeholder="Your surname">
+
+  <input type="email" name="EMAIL" placeholder="Your email" required>
+
+  <!-- 👇 THIS connects to Newsletter -->
+  <input type="hidden" name="group[47480][2]" value="1">
+
+  <!-- spam protection (keep this) -->
+  <div style="position:absolute; left:-5000px;" aria-hidden="true">
+    <input type="text" name="b_28959d4007cb6961cdeba0f75_13c190676f" tabindex="-1">
+  </div>
+
+  <button type="submit" class="button button-primary">
+    Join the Newsletter
+  </button>
+
+</form>
     </section>
 
     <section class="section">
