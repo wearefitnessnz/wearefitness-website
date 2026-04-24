@@ -22,23 +22,29 @@ forms.forEach((form) => {
   const message = form.querySelector(".form-message");
 
   form.addEventListener("submit", (event) => {
-    event.preventDefault();
 
-    if (!(message instanceof HTMLElement)) {
-      return;
+    // ONLY handle custom forms (not Mailchimp)
+    if (!form.action.includes("list-manage.com")) {
+      event.preventDefault();
+
+      if (!(message instanceof HTMLElement)) {
+        return;
+      }
+
+      const successMessage =
+        form.getAttribute("data-success-message") || "Thanks, you're on the list.";
+
+      const nameField = form.elements.namedItem("name");
+      const name = nameField instanceof HTMLInputElement ? nameField.value.trim() : "";
+
+      if (name && successMessage.includes("Thanks")) {
+        message.textContent = successMessage.replace("Thanks", `Thanks, ${name}`);
+      } else {
+        message.textContent = successMessage;
+      }
+
+      form.reset();
     }
-
-    const successMessage = form.getAttribute("data-success-message") || "Thanks, you're on the list.";
-    const nameField = form.elements.namedItem("name");
-    const name = nameField instanceof HTMLInputElement ? nameField.value.trim() : "";
-
-    if (name && successMessage.includes("Thanks")) {
-      message.textContent = successMessage.replace("Thanks", `Thanks, ${name}`);
-    } else {
-      message.textContent = successMessage;
-    }
-
-    form.reset();
   });
 });
 
